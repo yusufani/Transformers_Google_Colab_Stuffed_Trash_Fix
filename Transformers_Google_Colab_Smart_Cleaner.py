@@ -13,7 +13,7 @@
             logger.info("Deleting older checkpoint [{}] due to args.save_total_limit".format(checkpoint))
             #shutil.rmtree(checkpoint)
             self.smart_cleaner(checkpoint)
-    def smart_cleaner(checkpoint_folder):
+    def smart_cleaner(self,checkpoint_folder):
         NOT_DELETE_FILE_TYPES = [".txt" , ".json"  ,".bin"]
         NOT_DELETE_SPESIFIC_FILES = ["training_args.bin","scheduler.pt","config.json","sad2"] # You can also add folder name Example : "folder"    
         
