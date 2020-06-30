@@ -15,7 +15,7 @@
             self.smart_cleaner(checkpoint)
     def smart_cleaner(self,checkpoint_folder):
         NOT_DELETE_FILE_TYPES = [".txt" , ".json"  ,".bin"]
-        NOT_DELETE_SPESIFIC_FILES = ["training_args.bin","scheduler.pt","config.json","sad2"] # You can also add folder name Example : "folder"    
+        NOT_DELETE_SPESIFIC_FILES = ["training_args.bin","scheduler.pt","config.json"] # You can also add folder name Example : "folder"    
         
         for filename in os.listdir(checkpoint_folder):
             full_path = os.path.join(checkpoint_folder,filename )
